@@ -15,7 +15,9 @@ html {
 .hero {
   background-color: #0f2245;
   background-image: url('floating-cogs.svg');
+  background-size:contain;
 }
+
 .arrows {
   width: 60px;
   height: 72px;
