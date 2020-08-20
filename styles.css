@@ -14,7 +14,7 @@ html {
 
 .hero {
   background-color: #0f2245;
-  background-image: url('floating-cogs.svg');
+  /* background-image: url('floating-cogs.svg'); */
   background-size:contain;
 }
 
