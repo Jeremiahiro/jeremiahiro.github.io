@@ -12,6 +12,10 @@ html {
   border-bottom-right-radius: 222px;
 }
 
+.hero {
+  background-color: #0f2245;
+  background-image: url('floating-cogs.svg');
+}
 .arrows {
   width: 60px;
   height: 72px;
@@ -22,7 +26,7 @@ html {
 }
 
 .arrows path {
-  stroke: #0f2245;
+  stroke: #edf2f7;
   fill: transparent;
   stroke-width: 1px;
   animation: arrow 2s infinite;
