@@ -24,30 +24,30 @@
 
 </head>
 
-<body class="leading-normal tracking-normal text-gray-200 overflow-x-hidden bg-white"
+<body class="overflow-x-hidden leading-normal tracking-normal text-gray-200 bg-white"
 	style="font-family: 'Source Sans Pro', sans-serif;">
 
 	<!-- Navbar -->
-	<nav id="header" class="fixed w-full z-30 top-0 text-white">
-		<div class="w-full container mx-auto items-center justify-center mt-0 py-2">
-			<div class="mx-auto items-center block bg-transparent text-white">
-				<ul class="list-reset flex justify-center flex-1 items-center">
+	<nav id="header" class="fixed top-0 z-30 w-full text-white">
+		<div class="container items-center justify-center w-full py-2 mx-auto mt-0">
+			<div class="items-center block mx-auto text-white bg-transparent">
+				<ul class="flex items-center justify-center flex-1 list-reset">
 					<li class="mr-3">
-						<a class="inline-block py-2 px-2 lg:px-6 text-gray-200 font-semibold md:text-2xl no-underline hover:underline"
-							href="#">Home</a>
+						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
+							href="">Home</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block py-2 px-2 lg:px-6 text-gray-200 font-semibold md:text-2xl no-underline hover:underline"
-							href="#projects">Projects</a>
+						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
+							href="projects">Projects</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block py-2 px-2 lg:px-6 text-gray-200 font-semibold md:text-2xl no-underline hover:underline"
-							href="#about">About</a>
+						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
+							href="about">About</a>
 					</li>
 
 					<li class="mr-3">
-						<a class="inline-block py-2 px-2 lg:px-6 text-gray-200 font-semibold md:text-2xl no-underline hover:underline"
-							href="#contact">Contact</a>
+						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
+							href="contact">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -56,19 +56,17 @@
 	</nav>
 
 	<!-- Hero -->
-	<section class="hero py-24 md:py-56 relative min-h-screen rounded-br-2xl">
-		<div class="container px-4  h-full inline-block pt-24 md:pt-0">
-			<div class="w-full">
-				<h1 class="text-center mx-auto my-6 lg:my-2 text-5xl lg:text-7xl font-bold leading-tight text-gray-200">
-					Jeremiah Iro
-				</h1>
-				<p class="text-center mx-auto font-medium tracking-wide text-3xl mb-8 lg:w-2/3">
-					Nigeria based <strong>Web Developer</strong>
-				</p>
-			</div>
+	<section class="relative min-h-screen py-24 rounded-br-xl hero md:py-56">
+		<div class="w-full h-full pt-10 mx-auto text-center">
+			<h1 class="my-6 text-5xl font-bold leading-tight text-gray-200 lg:my-2 lg:text-7xl">
+				Jeremiah Iro
+			</h1>
+			<p class="mb-8 text-3xl font-medium tracking-wide">
+				<strong>Software Developer</strong>
+			</p>
 		</div>
 		<div class="">
-			<a href="#projects">
+			<a href="projects">
 				<svg class="arrows">
 					<path class="a1" d="M0 0 L30 32 L60 0"></path>
 					<path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -80,216 +78,48 @@
 	<div id="projects"></div>
 
 	<!-- Projects -->
-	<section class="bg-white pt-12 text-blue-650">
+	<section class="pt-12 bg-white text-blue-650">
 
-		<div class="mx-auto flex flex-wrap p-8 lg:px-10 xl:px-32">
+		<div class="flex flex-wrap p-8 mx-auto lg:px-10 xl:px-32">
 
-			<h1 class="w-full mb-4 text-4xl text-center lg:text-left lg:pl-12 font-bold leading-tight capitalize">
+			<h1 class="w-full mb-4 text-4xl font-bold leading-tight text-center capitalize lg:text-left lg:pl-12">
 				Check Out Some of my works
 			</h1>
 
-			<div
-				class="h-auto md:h-64 w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						<a href="https://customerpay.me/" target="_blank" title="Customer Pay Website">
-							Customerpay.me
-						</a>
-					</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
-						CustomerPayMe helps business owners manage daily transactions/debt collection.
-					</p>
-					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Laravel
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#MongoDB
-							</span>
-						</p>
-					</div>
-				</div>
+			<div class="w-full" id="expereinceContainer">
+
 			</div>
 
-			<div
-				class="h-auto md:h-64 w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						<a href="http://voices.i-amvocal.org/">Voices</a>
-					</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
-						A mobile web application that creates room for people to be vocal about things that affects
-						their community.
-					</p>
-					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Laravel
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#mySQL
-							</span>
-						</p>
-					</div>
-				</div>
-			</div>
+			<!-- Agency AI -->
+			<!-- LMS - Guardians Training -->
+			<!-- CRM - Guardians Training -->
+			<!-- Marshal -->
+			<!-- Social Agency -->
+			<!-- AgencyScale -->
+			<!-- Arrest Record -->
+			<!-- NMRC -->
+			<!-- SharePoint Customization -->
 
-			<div
-				class="h-auto md:h-64 w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">Renaissance.ng</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
-						Innovation Lab Company Website - Renaissance Innovation Labs
-					</p>
-					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Apollo GraphQL
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Docker
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Firebase
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Prisma
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#React
-							</span>
-						</p>
-					</div>
-				</div>
-			</div>
 
-			<div
-				class="h-auto md:h-64 w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">Sevenstarlog.com.ng</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
-						Logistics Company Website - Sevenstar Logistics Limited
-					</p>
-					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Firebase
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
-							</span>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Church Management Platform -->
-			<!-- <div class="w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						Church Management Software</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
-						Website that assists churches and other religious organizations to automate of daily operations
-					</p>
-					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#PHP (Laravel)
-							</span>
-						</p>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- Product Landing Page -->
-			<!-- <div class="w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						Product Landing Page</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
-						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
-							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
-					</p>
-					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
-							</span>
-							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#JQuery
-							</span>
-						</p>
-					</div>
-				</div>
-			</div> -->
 
 			<!-- Survey Form -->
-			<!-- <div class="w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
+			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
+				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
 					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
 						Survey Form</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
+					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
 						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
 							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
 					</p>
 					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
+						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								HTML/CSS
 							</span>
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								Javascript
 							</span>
 						</p>
 					</div>
@@ -297,25 +127,23 @@
 			</div> -->
 
 			<!-- Personal Portfolio -->
-			<!-- <div class="w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
+			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
+				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
 					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
 						Personal Portfolio</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
+					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
 						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
 							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
 					</p>
 					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
+						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								HTML/CSS
 							</span>
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								Javascript
 							</span>
 						</p>
 					</div>
@@ -323,25 +151,23 @@
 			</div> -->
 
 			<!-- Technical Documentation -->
-			<!-- <div class="w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
+			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
+				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
 					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
 						Technical Documentation</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
+					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
 						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
 							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
 					</p>
 					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
+						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								HTML/CSS
 							</span>
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								Javascript
 							</span>
 						</p>
 					</div>
@@ -349,25 +175,23 @@
 			</div> -->
 
 			<!-- Tribute Page -->
-			<!-- <div class="w-full xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3 py-3 flex flex-col flex-grow flex-shrink">
-				<div class="no-underline p-5 flex-1 
-							rounded-lg overflow-hidden shadow-lg border-t-4 border-blue-650 
-							group bg-white hover:bg-blue-650 hover:shadow-2xl">
+			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
+				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
 					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
 						Tribute Page</h1>
-					<p class="text-blue-650 text-lg my-2 group-hover:text-white">
+					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
 						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
 							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
 					</p>
 					<div class="">
-						<p class="italic text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
+						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#HTML/CSS
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								HTML/CSS
 							</span>
 							<span
-								class="italic inline-block bg-blue-650 rounded-full px-3 my-1 py-1 text-xs text-white">
-								#Javascript
+								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
+								Javascript
 							</span>
 						</p>
 					</div>
@@ -380,34 +204,46 @@
 	<div id="about"></div>
 
 	<!-- About -->
-	<section class="bg-white px-8 py-6 text-blue-650">
-		<div class="container max-w-4xl mx-auto xl:mx-40 m-8 text-left tracking-wide text-blue-650">
+	<section class="px-8 py-6 text-center bg-white text-blue-650">
+		<div class="m-8 tracking-wide text-left xl:mx-40 text-blue-650">
 
-			<h1 class="w-full mb-8 text-4xl text-center lg:text-left font-bold leading-tight capitalize">
+			<h1 class="w-full mb-8 text-4xl font-bold leading-tight text-center capitalize lg:text-left">
 				About Me
 			</h1>
 			<!-- <h1 class="w-full my-2 text-5xl font-bold leading-tight">About Me</h1> -->
-			<p class="mb-8 text-lg md:text-xl font-normal md:text-justify text-left">
-				Jeremiah Favour Iromaka (Jeremiah Iro), is a business management graduate with great passion for
-				technology and innovation.
-				He is an innovative web developer committed to creating and enhancing interactive/user-friendly
-				applications.
-				<!-- Leveraging analytical skills and strong attention to detail in order to meet and exceed goals, provide technical
-					knowledge and expertise.  -->
+			<p class="mb-8 text-lg font-normal text-left md:text-xl md:text-justify">
+				Jeremiah Iromaka is a Software Engineer currently based in London, United Kingdom.
+
+				With an illustrious career spanning over 6 years, Jeremiah has consistently demonstrated an unwavering
+				commitment to elevating human experiences through cutting-edge technology and innovative solutions.
 
 				<br /><br />
-				<!-- Jeremiahiro's core skills include HTML, CSS, Javascript (React & Nodejs), PHP (Laravel), SPSS, DBMS
-					(Mysql/NoSql) and git version control. 
-	
-					Jeremiahiro has completed projects alone and also worked with different teams.  -->
-				Jeremiahiro has an extraordinary relational abilities, and fantastic collaboration capacities.
-				A few tasks he is permitted to show off can be found in his
-				<a href="https://github.com/jeremiahiro" class="hover:font-bold underline">Github Repository</a>.
-				He is open to learning and enjoys progressive challenges.
+				Jeremiah's journey has been characterized by a dynamic blend of building, guiding, and optimizing
+				software development processes. Beyond his technical prowess, Jeremiah is a mentor, a volunteer, and an
+				advocate for quality education. His contributions as a Full Stack Development and Data Structure
+				Algorithm Tutor with Zuri Team, Inc. have been instrumental in shaping the next generation of
+				developers.
+
+				Through practical guides and publications on topics like corporate governance and firm innovation,
+				Jeremiah shares his invaluable insights with the global community.
+
+				<br /><br />
+				Jeremiah's educational background, including a Master of Science in Entrepreneurship and Innovation
+				Management from Loughborough University London, provides a solid academic foundation for his practical
+				work in the field. His experiences have equipped him with a diverse skill set and a global perspective.
+
+				In addition to his technical prowess, Jeremiah is deeply passionate about innovation. His certifications
+				in areas such as Executive Management Training and Enterprise Design Thinking Practitioner at IBM
+				reflect his dedication to continuous learning and professional development.
+
+				<br /><br />
+				Above all, Jeremiah's impact is felt not only in the projects he contributes to but also in the lives he
+				touches through his mentorship and guidance. His vision for a more innovative and interconnected world
+				serves as an inspiration.
 			</p>
 			<a target="_blank" download="JEREMIAH_FAVOUR_IROMAKA_RESUME" href="JEREMIAH_FAVOUR_IROMAKA_RESUME.pdf"
-				class="cursor-pointer bg-blue-650 text-blue-100 hover:text-white py-2 px-4 rounded inline-flex items-center shadow-xl hover:bg-blue-800">
-				<svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+				class="inline-flex items-center px-4 py-2 text-blue-100 rounded shadow-xl cursor-pointer bg-blue-650 hover:text-white hover:bg-blue-800">
+				<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
 					<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
 				<span>Download Resume</span>
 			</a>
@@ -415,19 +251,19 @@
 	</section>
 
 	<!-- Contact -->
-	<section class="hero p-8 lg:p-24 bg-gray-200" id="contact">
+	<section class="p-8 bg-gray-200 hero lg:p-24" id="contact">
 
-		<div class="mx-auto lg:w-4/5 flex flex-wrap text-blue-650">
+		<div class="flex flex-wrap mx-auto lg:w-4/5 text-blue-650">
 
 			<h1
-				class="text-gray-200 w-full mb-8 text-4xl text-center lg:text-left lg:pl-12 font-bold leading-tight capitalize">
+				class="w-full mb-8 text-4xl font-bold leading-tight text-center text-gray-200 capitalize lg:text-left lg:pl-12">
 				Get in Touch
 			</h1>
 
-			<div class="w-1/3 xl:w-auto m-3 flex flex-col flex-grow flex-shrink">
+			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
 				<a href="tel:+2348136478020" title="+2348136478020"
-					class="bg-white text-gray-650 font-bold rounded border-b-2 border-blue-650 hover:bg-blue-650 hover:text-white shadow-md py-2 px-4 inline-flex items-center">
-					<svg class="fill-current mr-2 group-hover:opacity-25" width="24" height="24"
+					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
+					<svg class="mr-2 fill-current group-hover:opacity-25" width="24" height="24"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 448 448" style="enable-background:new 0 0 448 448;" xml:space="preserve">
 						<path d="M432,320c-46.464,0-90.72-10.112-131.52-30.048c-3.84-1.92-8.256-2.144-12.256-0.736c-4.032,1.408-7.328,4.352-9.184,8.16
@@ -443,10 +279,10 @@
 				</a>
 			</div>
 
-			<!-- <div class="w-1/3 xl:w-auto m-3 flex flex-col flex-grow flex-shrink">
+			<!-- <div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
 				<a href="https://facebook.com/jeremiahiro" target="_blank"
-					class="bg-white text-gray-650-800 font-bold rounded border-b-2 border-blue-920 hover:bg-blue-920 hover:text-white shadow-md py-2 px-4 inline-flex items-center">
-					<svg class="fill-current mr-2 group-hover:fill-white" width="24" height="24"
+					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650-800 border-blue-920 hover:bg-blue-920 hover:text-white">
+					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 						<path
@@ -456,10 +292,10 @@
 				</a>
 			</div> -->
 
-			<div class="w-1/3 xl:w-auto m-3 flex flex-col flex-grow flex-shrink">
+			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
 				<a href="https://github.com/jeremiahiro" target="_blank" title="https://github.com/jeremiahiro"
-					class="bg-white text-gray-800 font-bold rounded border-b-2 border-blue-650 hover:bg-blue-650 hover:text-white shadow-md py-2 px-4 inline-flex items-center">
-					<svg class="fill-current mr-2 group-hover:fill-white" width="24" height="24"
+					class="inline-flex items-center px-4 py-2 font-bold text-gray-800 bg-white border-b-2 rounded shadow-md border-blue-650 hover:bg-blue-650 hover:text-white">
+					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 						<path d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872
@@ -476,11 +312,11 @@
 				</a>
 			</div>
 
-			<div class="w-1/3 xl:w-auto m-3 flex flex-col flex-grow flex-shrink">
+			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
 				<a href="https://linkedin.com/in/jeremiahiro" target="_blank"
 					title="https://linkedin.com/in/jeremiahiro"
-					class="bg-white text-gray-650 font-bold rounded border-b-2 border-blue-650 hover:bg-blue-650 hover:text-white shadow-md py-2 px-4 inline-flex items-center">
-					<svg class="fill-current mr-2 group-hover:fill-white" width="24" height="24"
+					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
+					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 						<rect y="160" width="114.496" height="352" />
@@ -493,10 +329,10 @@
 				</a>
 			</div>
 
-			<div class="w-1/3 xl:w-auto m-3 flex flex-col flex-grow flex-shrink">
+			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
 				<a href="mailto:jeremiahiro@gmail.com" title="jeremiahiro@gmail.com"
-					class="bg-white text-gray-650 font-bold rounded border-b-2 border-blue-650 hover:bg-blue-650 hover:text-white shadow-md py-2 px-4 inline-flex items-center">
-					<svg class="fill-current mr-2 group-hover:fill-white" width="24" height="24"
+					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
+					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;"
 						xml:space="preserve">
@@ -523,10 +359,10 @@
 				</a>
 			</div>
 
-			<div class="w-1/3 xl:w-auto m-3 flex flex-col flex-grow flex-shrink">
-				<a href="https://twitter.com/jeremiahiro" target="_blank" title="https://twitter.com/jeremiahiro"
-					class="bg-white text-gray-650 font-bold rounded border-b-2 border-blue-650 hover:bg-blue-650 hover:text-white shadow-md py-2 px-4 inline-flex items-center">
-					<svg class="fill-current mr-2 group-hover:fill-white" width="24" height="24"
+			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
+				<a href="https://twitter.com/jeremiahiro_" target="_blank" title="https://twitter.com/jeremiahiro"
+					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
+					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
 						<path
@@ -536,7 +372,7 @@
 				</a>
 			</div>
 
-			<div class="w-1/3 xl:hidden m-3 flex flex-col flex-grow flex-shrink">
+			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:hidden">
 				<div class="md:hidden">
 					<!-- fg -->
 				</div>
@@ -545,7 +381,7 @@
 		</div>
 
 		<!-- <div class="">
-			<img class="text-center mx-auto" src="Iro-static.png" alt="">
+			<img class="mx-auto text-center" src="Iro-static.png" alt="">
 		</div> -->
 
 	</section>
@@ -570,6 +406,134 @@
 			}
 
 		});
+
+		var experiences = [
+			{
+				title: 'Agency AI',
+				description: 'A 4-in-1 agency app utilizing artificial intelligence (AI) to set up and run agencies across various niches.',
+				stack: ['OpenAI API', 'Vue.js', 'Laravel', 'Postman'],
+			},
+			{
+				title: 'LMS - Guardians Training',
+				description: 'Learning Management System for delivery of educational courses and training programs.',
+				stack: ['Tailwind', 'Alpine.js', 'Laravel', 'Livewire'],
+				link: {
+					title: 'Preview',
+					url: 'https://lms.guardianscorporate.co.uk',
+				}
+			},
+			{
+				title: 'CRM - Guardians Training',
+				description: 'Customer Relationship Management Portal for managing & analyzing customer interactions.',
+				stack: ['Tailwind', 'Alpine.js', 'Laravel', 'Livewire'],
+				link: {
+					title: 'Preview',
+					url: 'https://crm.guardianscorporate.co.uk',
+				}
+			},
+			{
+				title: 'Marshal',
+				description: 'Achieve compliance in ADA, Web Accessibility, Web Securuity, Privacy, Local Business Compliance, etc.',
+				stack: ['Laravel', 'Postman', 'Nuxt.js'],
+				link: {
+					title: 'Preview',
+					url: 'https://app.usemarshal.co',
+				}
+			},
+			{
+				title: 'PandoraX',
+				description: 'Email marketing agency with loads of DFY assets & templates.',
+				stack: ['Laravel', 'Postman', 'Nuxt.js'],
+			},
+			{
+				title: 'Social Agency',
+				description: 'Build and Grow digital agency business effortlessly.',
+				stack: ['PHP', 'Laravel', 'Postman', 'Vue.js', 'MySQL'],
+				link: {
+					title: 'Preview',
+					url: 'https://app.socialagency360.com',
+				}
+			},
+			{
+				title: 'Agency Scale',
+				description: 'Agency Customer Relationship Management (CRM) Platform for managing multiple businessess.',
+				stack: ['PHP', 'Laravel', 'Postman', 'Horizon', 'MySQL'],
+				link: {
+					title: 'Preview',
+					url: 'https://app.getagencyscale.com',
+				}
+			},
+			{
+				title: 'NMRC Website',
+				description: 'Company portfolio & blog website for Nigeria Mortgage Refinance Company.',
+				stack: ['Wordpress', 'Nginx', 'MySQL'],
+			},
+			{
+				title: 'Detention Data Record Management Portal',
+				description: 'Arrest record for the Federal Ministry of Justice (Nigeria) in partnership with British Council.',
+				stack: ['Node.js', 'React.js', 'MongoDB'],
+			},
+			{
+				title: 'SharePoint Customization',
+				description: 'Tailored Microsoft SharePoint to meet organizational need and automate business process.',
+				stack: ['SharePoint', 'Power Apps', 'Power Automate'],
+			},
+			{
+				title: 'Customerpay.me',
+				description: 'Manage daily transactions/debt collection.',
+				stack: ['PHP', 'Laravel', 'MySQL'],
+			},
+			{
+				title: 'Voices',
+				description: 'A PWA for community engagement.',
+				stack: ['PHP', 'Laravel', 'Apache'],
+			},
+			{
+				title: 'Sevenstarlog.com.ng',
+				description: 'Logistics Company Website',
+				stack: ['PHP', 'Laravel', 'MySQL', 'Vue.js'],
+			},
+			{
+				title: 'Renaissance Innovation Labs',
+				description: 'Company Portfolio Website',
+				stack: ['React.js', 'Firebase', 'Docker'],
+			},
+			{
+				title: 'Church Management Software',
+				description: 'Member management and event tracking.',
+				stack: ['HTML/CSS', 'Laravel', 'MySQL', 'Xampp'],
+			},
+			{
+				title: 'Product Landing Page',
+				description: 'Excercise in fulfilment of freeCodeCamp Certifications.',
+				stack: ['HTML/CSS', 'JavaScript', 'jQuery'],
+				link: {
+					title: 'FreeCodeCamp',
+					url: 'https://www.freecodecamp.org/jeremiahiro',
+				}
+			}
+		];
+
+		var experience = '<div class="flex flex-wrap w-full">'
+		experiences.forEach(function (item) {
+			experience += `
+						<div class="flex-col flex-grow flex-shrink py-3 w md:w-1/2 lg:p-6 md:px-3">
+							<div class="flex-1 w-full p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
+								<h1 class="w-full text-2xl font-bold capitalize text-blue-650 group-hover:text-white">${item.title}</h1>
+								<p class="my-2 text-lg text-blue-650 group-hover:text-white">${item.description} ${item.link ? `<a href="${item.link.url}" target="_blank" class="text-sm italic underline captalize text-teal-850 group-hover:text-white">${item.link.title}</a>` : ''}</p>
+								<p class="text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
+									${item.stack.map(stack => `
+										<span class="inline-block px-3 py-1 my-1 text-xs text-white rounded-full bg-blue-650">
+											${stack}
+										</span>`).join('')}
+								</p>
+							</div>
+						</div>
+					`;
+		});
+
+		experience += '</div>';
+		document.getElementById("expereinceContainer").innerHTML = experience;
 	</script>
 </body>
 

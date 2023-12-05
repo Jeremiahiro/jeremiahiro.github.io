@@ -12525,8 +12525,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.rounded-br-2xl {
-  border-bottom-right-radius: 222px;
+.rounded-br-xl {
+  border-bottom-right-radius: 140px;
 }
 
 @media (min-width: 640px) {
