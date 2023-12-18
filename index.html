@@ -2,527 +2,163 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Jeremiah Iro</title>
-	<meta name="description"
-		content="Intermediate Fullstack developer. Performance-driven and motivated business management graduate.">
-	<meta name="keywords" content="Portfolio Web Developer Jeremiah Iro Iromaka Favour Jeremiahiro">
-	<meta name="author" content="Iromaka Jeremiah Favour">
-
-	<!--CSS Style Sheet-->
-	<link rel="stylesheet" href="tailwind.css">
-	<link rel="stylesheet" href="styles.css">
-
-	<!-- favicon icon  -->
-	<link rel="shortcut icon" href="favicon-16x16.png">
-	<link rel="shortcut icon" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Jeremiah Iro Portfolio</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Jeremiah Iromaka Portfolio Website">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&Caveat:wght@500&display=swap"
+		rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						inter: ['Inter', 'sans-serif'],
+						caveat: ['Caveat', 'cursive'],
+					},
+				},
+			},
+		};
+	</script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 
 </head>
 
-<body class="overflow-x-hidden leading-normal tracking-normal text-gray-200 bg-white"
-	style="font-family: 'Source Sans Pro', sans-serif;">
+<body class="relative antialiased font-inter">
 
-	<!-- Navbar -->
-	<nav id="header" class="fixed top-0 z-30 w-full text-white">
-		<div class="container items-center justify-center w-full py-2 mx-auto mt-0">
-			<div class="items-center block mx-auto text-white bg-transparent">
-				<ul class="flex items-center justify-center flex-1 list-reset">
-					<li class="mr-3">
-						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
-							href="">Home</a>
-					</li>
-					<li class="mr-3">
-						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
-							href="projects">Projects</a>
-					</li>
-					<li class="mr-3">
-						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
-							href="about">About</a>
-					</li>
+	<main class="relative flex flex-col justify-center min-h-screen overflow-hidden bg-slate-50">
+		<div class="flex w-full p-20 py-10 mx-auto">
 
-					<li class="mr-3">
-						<a class="inline-block px-2 py-2 font-semibold text-gray-200 no-underline lg:px-6 md:text-2xl hover:underline"
-							href="contact">Contact</a>
-					</li>
-				</ul>
-			</div>
+			<!-- Sidebar -->
+			<div class="w-1/5 flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
+				<div class="space-y-8 relative before:absolute before:-translate-x-1/2 before:-translate-y-3 md:before:ml-[1.25rem] before:h-5/6 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+					id="portfolio-tab" data-tabs-toggle="#portfolio-tab-content" role="tablist">
 
-		</div>
-	</nav>
-
-	<!-- Hero -->
-	<section class="relative min-h-screen py-24 rounded-br-xl hero md:py-56">
-		<div class="w-full h-full pt-10 mx-auto text-center">
-			<h1 class="my-6 text-5xl font-bold leading-tight text-gray-200 lg:my-2 lg:text-7xl">
-				Jeremiah Iro
-			</h1>
-			<p class="mb-8 text-3xl font-medium tracking-wide">
-				<strong>Software Developer</strong>
-			</p>
-		</div>
-		<div class="">
-			<a href="projects">
-				<svg class="arrows">
-					<path class="a1" d="M0 0 L30 32 L60 0"></path>
-					<path class="a2" d="M0 20 L30 52 L60 20"></path>
-					<path class="a3" d="M0 40 L30 72 L60 40"></path>
-				</svg>
-			</a>
-		</div>
-	</section>
-	<div id="projects"></div>
-
-	<!-- Projects -->
-	<section class="pt-12 bg-white text-blue-650">
-
-		<div class="flex flex-wrap p-8 mx-auto lg:px-10 xl:px-32">
-
-			<h1 class="w-full mb-4 text-4xl font-bold leading-tight text-center lg:text-left lg:pl-12">
-				Check Out Some of my Works
-			</h1>
-
-			<div class="w-full" id="expereinceContainer">
-
-			</div>
-
-			<!-- Survey Form -->
-			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
-				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						Survey Form</h1>
-					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
-						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
-							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
-					</p>
-					<div class="">
-						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								HTML/CSS
-							</span>
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								Javascript
-							</span>
-						</p>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- Personal Portfolio -->
-			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
-				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						Personal Portfolio</h1>
-					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
-						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
-							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
-					</p>
-					<div class="">
-						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								HTML/CSS
-							</span>
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								Javascript
-							</span>
-						</p>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- Technical Documentation -->
-			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
-				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						Technical Documentation</h1>
-					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
-						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
-							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
-					</p>
-					<div class="">
-						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								HTML/CSS
-							</span>
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								Javascript
-							</span>
-						</p>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- Tribute Page -->
-			<!-- <div class="flex flex-col flex-grow flex-shrink w-full py-3 xl:w-5/12 lg:w-2/5 md:w-1/2 lg:p-6 md:px-3">
-				<div class="flex-1 p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
-					<h1 class="w-full text-2xl font-bold text-blue-650 group-hover:text-white">
-						Tribute Page</h1>
-					<p class="my-2 text-lg text-blue-650 group-hover:text-white">
-						Excercise in fulfilment of <a href="https://www.freecodecamp.org/jeremiahiro"
-							class="underline">freeCodeCamp</a> Responsive Web Design Certifications
-					</p>
-					<div class="">
-						<p class="text-base italic font-bold text-teal-850 group-hover:text-white">Technology Used:
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								HTML/CSS
-							</span>
-							<span
-								class="inline-block px-3 py-1 my-1 text-xs italic text-white rounded-full bg-blue-650">
-								Javascript
-							</span>
-						</p>
-					</div>
-				</div>
-			</div> -->
-
-		</div>
-
-	</section>
-	<div id="about"></div>
-
-	<!-- About -->
-	<section class="px-8 py-6 text-center bg-white text-blue-650">
-		<div class="m-8 tracking-wide text-left xl:mx-40 text-blue-650">
-
-			<h1 class="w-full mb-8 text-4xl font-bold leading-tight text-center capitalize lg:text-left">
-				About Me
-			</h1>
-			<!-- <h1 class="w-full my-2 text-5xl font-bold leading-tight">About Me</h1> -->
-			<p class="mb-8 text-lg font-normal text-left md:text-xl md:text-justify">
-				Jeremiah Iromaka is a Software Engineer currently based in London, United Kingdom.
-
-				With an illustrious career spanning over 6 years, Jeremiah has consistently demonstrated an unwavering
-				commitment to elevating human experiences through cutting-edge technology and innovative solutions.
-
-				<br /><br />
-				Jeremiah's journey has been characterized by a dynamic blend of building, guiding, and optimizing
-				software development processes. Beyond his technical prowess, Jeremiah is a mentor, a volunteer, and an
-				advocate for quality education. His contributions as a Full Stack Development and Data Structure
-				Algorithm Tutor with Zuri Team, Inc. have been instrumental in shaping the next generation of
-				developers.
-
-				Through practical guides and publications on topics like corporate governance and firm innovation,
-				Jeremiah shares his invaluable insights with the global community.
-
-				<br /><br />
-				Jeremiah's educational background, including a Master of Science in Entrepreneurship and Innovation
-				Management from Loughborough University London, provides a solid academic foundation for his practical
-				work in the field. His experiences have equipped him with a diverse skill set and a global perspective.
-
-				In addition to his technical prowess, Jeremiah is deeply passionate about innovation. His certifications
-				in areas such as Executive Management Training and Enterprise Design Thinking Practitioner at IBM
-				reflect his dedication to continuous learning and professional development.
-
-				<br /><br />
-				Above all, Jeremiah's impact is felt not only in the projects he contributes to but also in the lives he
-				touches through his mentorship and guidance. His vision for a more innovative and interconnected world
-				serves as an inspiration.
-			</p>
-			<a target="_blank" download="JEREMIAH_FAVOUR_IROMAKA_RESUME" href="JEREMIAH_FAVOUR_IROMAKA_RESUME.pdf"
-				class="inline-flex items-center px-4 py-2 text-blue-100 rounded shadow-xl cursor-pointer bg-blue-650 hover:text-white hover:bg-blue-800">
-				<svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-					<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
-				<span>Download Resume</span>
-			</a>
-		</div>
-	</section>
-
-	<!-- Contact -->
-	<section class="p-8 bg-gray-200 hero lg:p-24" id="contact">
-
-		<div class="flex flex-wrap mx-auto lg:w-4/5 text-blue-650">
-
-			<h1
-				class="w-full mb-8 text-4xl font-bold leading-tight text-center text-gray-200 capitalize lg:text-left lg:pl-12">
-				Get in Touch
-			</h1>
-
-			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
-				<a href="tel:+2348136478020" title="+2348136478020"
-					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
-					<svg class="mr-2 fill-current group-hover:opacity-25" width="24" height="24"
-						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 448 448" style="enable-background:new 0 0 448 448;" xml:space="preserve">
-						<path d="M432,320c-46.464,0-90.72-10.112-131.52-30.048c-3.84-1.92-8.256-2.144-12.256-0.736c-4.032,1.408-7.328,4.352-9.184,8.16
-			   l-25.152,52.064C188.8,313.12,134.912,259.264,98.624,194.176l52.032-25.216c3.84-1.856,6.752-5.152,8.16-9.184
-			   c1.376-4,1.12-8.416-0.768-12.256C138.112,106.72,128,62.464,128,16c0-8.832-7.168-16-16-16H16C7.168,0,0,7.168,0,16
-			   c0,238.208,193.792,432,432,432c8.832,0,16-7.168,16-16v-96C448,327.168,440.832,320,432,320z" />
-						<circle cx="224" cy="64" r="32" />
-						<circle cx="320" cy="64" r="32" />
-						<circle cx="416" cy="64" r="32" />
-					</svg>
-
-					<span class="">Call</span>
-				</a>
-			</div>
-
-			<!-- <div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
-				<a href="https://facebook.com/jeremiahiro" target="_blank"
-					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650-800 border-blue-920 hover:bg-blue-920 hover:text-white">
-					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
-						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-						<path
-							d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z" />
-					</svg>
-					<span class="">Facebook</span>
-				</a>
-			</div> -->
-
-			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
-				<a href="https://github.com/jeremiahiro" target="_blank" title="https://github.com/jeremiahiro"
-					class="inline-flex items-center px-4 py-2 font-bold text-gray-800 bg-white border-b-2 rounded shadow-md border-blue-650 hover:bg-blue-650 hover:text-white">
-					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
-						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-						<path d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872
-			c12.8,2.368,17.472-5.568,17.472-12.384c0-6.112-0.224-22.272-0.352-43.712c-71.2,15.52-86.24-34.464-86.24-34.464
-			c-11.616-29.696-28.416-37.6-28.416-37.6c-23.264-15.936,1.728-15.616,1.728-15.616c25.696,1.824,39.2,26.496,39.2,26.496
-			c22.848,39.264,59.936,27.936,74.528,21.344c2.304-16.608,8.928-27.936,16.256-34.368
-			c-56.832-6.496-116.608-28.544-116.608-127.008c0-28.064,9.984-51.008,26.368-68.992c-2.656-6.496-11.424-32.64,2.496-68
-			c0,0,21.504-6.912,70.4,26.336c20.416-5.696,42.304-8.544,64.096-8.64c21.728,0.128,43.648,2.944,64.096,8.672
-			c48.864-33.248,70.336-26.336,70.336-26.336c13.952,35.392,5.184,61.504,2.56,68c16.416,17.984,26.304,40.928,26.304,68.992
-			c0,98.72-59.84,120.448-116.864,126.816c9.184,7.936,17.376,23.616,17.376,47.584c0,34.368-0.32,62.08-0.32,70.496
-			c0,6.88,4.608,14.88,17.6,12.352C438.72,472.145,512,375.857,512,262.353C512,120.401,397.376,5.329,255.968,5.329z" />
-					</svg>
-					<span class="">GitHub</span>
-				</a>
-			</div>
-
-			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
-				<a href="https://linkedin.com/in/jeremiahiro" target="_blank"
-					title="https://linkedin.com/in/jeremiahiro"
-					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
-					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
-						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-						<rect y="160" width="114.496" height="352" />
-						<path d="M426.368,164.128c-1.216-0.384-2.368-0.8-3.648-1.152c-1.536-0.352-3.072-0.64-4.64-0.896
-				c-6.08-1.216-12.736-2.08-20.544-2.08c-66.752,0-109.088,48.544-123.04,67.296V160H160v352h114.496V320
-				c0,0,86.528-120.512,123.04-32c0,79.008,0,224,0,224H512V274.464C512,221.28,475.552,176.96,426.368,164.128z" />
-						<circle cx="56" cy="56" r="56" />
-					</svg>
-					<span class="">Linkedin</span>
-				</a>
-			</div>
-
-			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
-				<a href="mailto:jeremiahiro@gmail.com" title="jeremiahiro@gmail.com"
-					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
-					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
-						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;"
-						xml:space="preserve">
-						<path d="M309.333,426.667h-128c-5.888,0-10.667,4.779-10.667,10.667c0,5.888,4.779,10.667,10.667,10.667h128
-					c5.888,0,10.667-4.779,10.667-10.667C320,431.445,315.221,426.667,309.333,426.667z" />
-						<path d="M309.333,384h-128c-5.888,0-10.667,4.779-10.667,10.667c0,5.888,4.779,10.667,10.667,10.667h128
-					c5.888,0,10.667-4.779,10.667-10.667C320,388.779,315.221,384,309.333,384z" />
-						<path d="M309.333,341.333h-128c-5.888,0-10.667,4.779-10.667,10.667s4.779,10.667,10.667,10.667h128
-					c5.888,0,10.667-4.779,10.667-10.667S315.221,341.333,309.333,341.333z" />
-						<path d="M309.333,298.667h-128c-5.888,0-10.667,4.779-10.667,10.667S175.445,320,181.333,320h128
-					c5.888,0,10.667-4.779,10.667-10.667S315.221,298.667,309.333,298.667z" />
-						<path d="M437.333,42.667h-384C23.936,42.667,0,66.603,0,96v234.667C0,360.064,23.936,384,53.333,384h96v-96
-					c0-5.888,4.779-10.667,10.667-10.667h170.667c5.888,0,10.667,4.779,10.667,10.667v96h96c29.397,0,53.333-23.936,53.333-53.333V96
-					C490.667,66.603,466.731,42.667,437.333,42.667z M167.552,231.552L60.885,338.219c-2.091,2.069-4.821,3.115-7.552,3.115
-					s-5.461-1.045-7.552-3.115c-4.16-4.16-4.16-10.923,0-15.083l106.667-106.667c4.16-4.16,10.923-4.16,15.083,0
-					C171.691,220.629,171.712,227.371,167.552,231.552z M444.885,338.219c-2.091,2.069-4.821,3.115-7.552,3.115
-					c-2.731,0-5.461-1.045-7.552-3.115L323.115,231.552c-4.16-4.16-4.16-10.923,0-15.083c4.16-4.16,10.923-4.16,15.083,0
-					l106.667,106.667C449.045,327.296,449.045,334.037,444.885,338.219z M443.605,104.64l-165.76,119.701
-					c-9.728,7.04-21.12,10.539-32.512,10.539c-11.392,0-22.784-3.52-32.491-10.539L47.083,104.64
-					c-4.779-3.435-5.845-10.112-2.389-14.891c3.435-4.8,10.091-5.867,14.891-2.389l165.76,119.701c12.139,8.768,27.861,8.768,40,0
-					L431.104,87.36c4.779-3.477,11.435-2.389,14.891,2.389C449.451,94.528,448.363,101.205,443.605,104.64z" />
-					</svg>
-					<span class="">Mail</span>
-				</a>
-			</div>
-
-			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:w-auto">
-				<a href="https://twitter.com/jeremiahiro_" target="_blank" title="https://twitter.com/jeremiahiro"
-					class="inline-flex items-center px-4 py-2 font-bold bg-white border-b-2 rounded shadow-md text-gray-650 border-blue-650 hover:bg-blue-650 hover:text-white">
-					<svg class="mr-2 fill-current group-hover:fill-white" width="24" height="24"
-						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-						<path
-							d="M17.316,6.246c0.008,0.162,0.011,0.326,0.011,0.488c0,4.99-3.797,10.742-10.74,10.742c-2.133,0-4.116-0.625-5.787-1.697 c0.296,0.035,0.596,0.053,0.9,0.053c1.77,0,3.397-0.604,4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23,0.043,0.467,0.066,0.71,0.066c0.345,0,0.679-0.045,0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016,0-0.031,0-0.047 c0.509,0.283,1.092,0.453,1.71,0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691,0.186-1.34,0.512-1.898 C3.942,5.498,6.725,7,9.862,7.158C9.798,6.881,9.765,6.594,9.765,6.297c0-2.084,1.689-3.773,3.774-3.773 c1.086,0,2.067,0.457,2.756,1.191c0.859-0.17,1.667-0.484,2.397-0.916c-0.282,0.881-0.881,1.621-1.66,2.088 c0.764-0.092,1.49-0.293,2.168-0.594C18.694,5.051,18.054,5.715,17.316,6.246z" />
-					</svg>
-					<span class="">Twitter</span>
-				</a>
-			</div>
-
-			<div class="flex flex-col flex-grow flex-shrink w-1/3 m-3 xl:hidden">
-				<div class="md:hidden">
-					<!-- fg -->
-				</div>
-			</div>
-
-		</div>
-
-		<!-- <div class="">
-			<img class="mx-auto text-center" src="Iro-static.png" alt="">
-		</div> -->
-
-	</section>
-
-	<script>
-		var scrollpos = window.scrollY;
-		var header = document.getElementById("header");
-		// var navcontent = document.getElementById("nav-content");
-		// var navaction = document.getElementById("navAction");
-		var brandname = document.getElementById("brandname");
-		var toToggle = document.querySelectorAll(".toggleColour");
-
-		document.addEventListener('scroll', function () {
-
-			/*Apply classes for slide in bar*/
-			scrollpos = window.scrollY;
-
-			if (scrollpos > 95) {
-				header.classList.add("hero");
-			} else {
-				header.classList.remove("hero");
-			}
-
-		});
-
-		var experiences = [
-			{
-				title: 'Agency AI',
-				description: 'A 4-in-1 agency app utilizing artificial intelligence (AI) to set up and run agencies across various niches.',
-				stack: ['OpenAI API', 'Vue.js', 'Laravel', 'Postman'],
-			},
-			{
-				title: 'LMS - Guardians Training',
-				description: 'Learning Management System for delivery of educational courses and training programs.',
-				stack: ['Tailwind', 'Alpine.js', 'Laravel', 'Livewire'],
-				link: {
-					title: 'Preview',
-					url: 'https://lms.guardianscorporate.co.uk',
-				}
-			},
-			{
-				title: 'CRM - Guardians Training',
-				description: 'Customer Relationship Management Portal for managing & analyzing customer interactions.',
-				stack: ['Tailwind', 'Alpine.js', 'Laravel', 'Livewire'],
-				link: {
-					title: 'Preview',
-					url: 'https://crm.guardianscorporate.co.uk',
-				}
-			},
-			{
-				title: 'Marshal',
-				description: 'Achieve compliance in ADA, Web Accessibility, Web Securuity, Privacy, Local Business Compliance, etc.',
-				stack: ['Laravel', 'Postman', 'Nuxt.js'],
-				link: {
-					title: 'Preview',
-					url: 'https://app.usemarshal.co',
-				}
-			},
-			{
-				title: 'PandoraX',
-				description: 'Email marketing agency with loads of DFY assets & templates.',
-				stack: ['Laravel', 'Postman', 'Nuxt.js'],
-			},
-			{
-				title: 'Social Agency',
-				description: 'Build and Grow digital agency business effortlessly.',
-				stack: ['PHP', 'Laravel', 'Postman', 'Vue.js', 'MySQL'],
-				link: {
-					title: 'Preview',
-					url: 'https://app.socialagency360.com',
-				}
-			},
-			{
-				title: 'Agency Scale',
-				description: 'Agency Customer Relationship Management (CRM) Platform for managing multiple businessess.',
-				stack: ['PHP', 'Laravel', 'Postman', 'Horizon', 'MySQL'],
-				link: {
-					title: 'Preview',
-					url: 'https://app.getagencyscale.com',
-				}
-			},
-			{
-				title: 'NMRC Website',
-				description: 'Company portfolio & blog website for Nigeria Mortgage Refinance Company.',
-				stack: ['Wordpress', 'Nginx', 'MySQL'],
-			},
-			{
-				title: 'Detention Data Record Management Portal',
-				description: 'Arrest record for the Federal Ministry of Justice (Nigeria) in partnership with British Council.',
-				stack: ['Node.js', 'React.js', 'MongoDB'],
-			},
-			{
-				title: 'SharePoint Customization',
-				description: 'Tailored Microsoft SharePoint to meet organizational need and automate business process.',
-				stack: ['SharePoint', 'Power Apps', 'Power Automate'],
-			},
-			{
-				title: 'Customerpay.me',
-				description: 'Manage daily transactions/debt collection.',
-				stack: ['PHP', 'Laravel', 'MySQL'],
-			},
-			{
-				title: 'Voices',
-				description: 'A PWA for community engagement.',
-				stack: ['PHP', 'Laravel', 'Apache'],
-			},
-			{
-				title: 'Sevenstarlog.com.ng',
-				description: 'Logistics Company Website',
-				stack: ['PHP', 'Laravel', 'MySQL', 'Vue.js'],
-			},
-			{
-				title: 'Renaissance Innovation Labs',
-				description: 'Company Portfolio Website',
-				stack: ['React.js', 'Firebase', 'Docker'],
-			},
-			{
-				title: 'Church Management Software',
-				description: 'Member management and event tracking.',
-				stack: ['HTML/CSS', 'Laravel', 'MySQL', 'Xampp'],
-			},
-			{
-				title: 'Product Landing Page',
-				description: 'Excercise in fulfilment of freeCodeCamp Certifications.',
-				stack: ['HTML/CSS', 'JavaScript', 'jQuery'],
-				link: {
-					title: 'FreeCodeCamp',
-					url: 'https://www.freecodecamp.org/jeremiahiro',
-				}
-			}
-		];
-
-		var experience = '<div class="flex flex-wrap w-full">'
-		experiences.forEach(function (item) {
-			experience += `
-						<div class="flex-col flex-grow flex-shrink py-3 w md:w-1/2 lg:p-6 md:px-3">
-							<div class="flex-1 w-full p-5 overflow-hidden no-underline bg-white border-t-4 rounded-lg shadow-lg border-blue-650 group hover:bg-blue-650 hover:shadow-2xl">
-								<h1 class="w-full text-2xl font-bold capitalize text-blue-650 group-hover:text-white">${item.title}</h1>
-								<p class="my-2 text-lg text-blue-650 group-hover:text-white">${item.description} ${item.link ? `<a href="${item.link.url}" target="_blank" class="text-sm italic underline captalize text-teal-850 group-hover:text-white">${item.link.title}</a>` : ''}</p>
-								<p class="text-base font-bold text-teal-850 group-hover:text-white">Technology Used:
-									${item.stack.map(stack => `
-										<span class="inline-block px-3 py-1 my-1 text-xs text-white rounded-full bg-blue-650">
-											${stack}
-										</span>`).join('')}
-								</p>
+					<!-- Item #1 -->
+					<div class="relative pb-6 group" role="presentation">
+						<div class="flex flex-col items-center mb-1 sm:flex-row">
+							<div class="">
+								<div
+									class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow md:order-1">
+									<svg class="fill-emerald-500" xmlns="http://www.w3.org/2000/svg" width="16"
+										height="16">
+										<path
+											d="M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="mb-1 ml-2 text-2xl font-medium text-indigo-500 font-caveat" id="profile-tab"
+								data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+								aria-selected="false">
+								Profile
 							</div>
 						</div>
-					`;
-		});
+					</div>
 
-		experience += '</div>';
-		document.getElementById("expereinceContainer").innerHTML = experience;
-	</script>
+					<div class="relative py-6 group" role="presentation">
+						<div class="flex flex-col items-center mb-1 sm:flex-row">
+							<div class="">
+								<div
+									class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow md:order-1">
+									<svg class="fill-emerald-500" xmlns="http://www.w3.org/2000/svg" width="16"
+										height="16">
+										<path
+											d="M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="mb-1 ml-2 text-2xl font-medium text-indigo-500 font-caveat" id="dashboard-tab"
+								data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard"
+								aria-selected="false">
+								Portfolio
+							</div>
+						</div>
+					</div>
+
+					<div class="relative py-6 group" role="presentation">
+						<div class="flex flex-col items-center mb-1 sm:flex-row">
+							<div class="">
+								<div
+									class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow md:order-1">
+									<svg class="fill-emerald-500" xmlns="http://www.w3.org/2000/svg" width="16"
+										height="16">
+										<path
+											d="M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="mb-1 ml-2 text-2xl font-medium text-indigo-500 font-caveat" id="settings-tab"
+								data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+								aria-selected="false">
+								Get in Touch
+							</div>
+						</div>
+					</div>
+
+					<div class="relative py-6 group" role="presentation">
+						<div class="flex flex-col items-center mb-1 sm:flex-row">
+							<div class="">
+								<div
+									class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow md:order-1">
+									<svg class="fill-emerald-500" xmlns="http://www.w3.org/2000/svg" width="16"
+										height="16">
+										<path
+											d="M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="mb-1 ml-2 text-2xl font-medium text-indigo-500 font-caveat" id="contacts-tab"
+								data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
+								aria-selected="false">
+								The origin
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Content -->
+			<div class="w-full">
+
+				<div id="portfolio-tab-content">
+					<div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel"
+						aria-labelledby="profile-tab">
+						<p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+								class="font-medium text-gray-800 dark:text-white">Profile tab's associated
+								content</strong>. Clicking another tab will toggle the visibility of this one for the
+							next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+					</div>
+					<div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="dashboard" role="tabpanel"
+						aria-labelledby="dashboard-tab">
+						<p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+								class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated
+								content</strong>. Clicking another tab will toggle the visibility of this one for the
+							next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+					</div>
+					<div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings" role="tabpanel"
+						aria-labelledby="settings-tab">
+						<p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+								class="font-medium text-gray-800 dark:text-white">Settings tab's associated
+								content</strong>. Clicking another tab will toggle the visibility of this one for the
+							next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+					</div>
+					<div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel"
+						aria-labelledby="contacts-tab">
+						<p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+								class="font-medium text-gray-800 dark:text-white">Contacts tab's associated
+								content</strong>. Clicking another tab will toggle the visibility of this one for the
+							next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+					</div>
+				</div>
+
+			</div>
+	</main>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
 </body>
 
 </html>
