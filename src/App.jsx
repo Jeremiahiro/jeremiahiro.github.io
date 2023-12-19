@@ -3,8 +3,8 @@ import {
   About,
   Contact,
   Experience,
-  Hero,
-  Navbar,
+  // Hero,
+  // Navbar,
   Tech,
   Projects,
 } from './components';
@@ -12,17 +12,25 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
+      <div className="flex">
+      <div className='w-1/4'>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sunt. Sed, fuga alias. Facilis, soluta sit enim repellendus nesciunt vel quod, repudiandae laudantium ab, hic voluptas minima quos! Facilis, quae.
+      </div>
+      <div className='w-full'>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sunt. Sed, fuga alias. Facilis, soluta sit enim repellendus nesciunt vel quod, repudiandae laudantium ab, hic voluptas minima quos! Facilis, quae.
+      </div>
+      </div>
       <div className="relative z-0">
         <div>
-          <Navbar />
-          <Hero />
+          {/* <Navbar /> */}
+          {/* <Hero /> */}
         </div>
 
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
+        <div className="bg-center bg-no-repeat bg-cover bg-about">
           <About />
         </div>
 
-        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
+        <div className="pb-10 bg-center bg-no-repeat bg-cover bg-tech">
           <Tech />
         </div>
 
