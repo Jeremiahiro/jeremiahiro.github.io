@@ -32,9 +32,10 @@
 * {
   margin: 0;
   padding: 0;
+  outline: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  /* color-scheme: dark; */
 }
 
 .nav-links::after {
@@ -51,7 +52,7 @@
   width: 70%;
 }
 
-#about {
+/* #about {
   margin-left: -24px;
   font-size: 100px;
 }
@@ -59,7 +60,7 @@
 #projects {
   margin-left: -2px;
   font-size: 100px;
-}
+} */
 
 #contact {
   margin-left: -20px;
@@ -80,16 +81,12 @@
 }
 
 .vertical-timeline.vertical-timeline-custom-line::before {
-  background: rgb(66, 66, 66);
-  background: linear-gradient(
-    180deg,
-    rgba(66, 66, 66, 0.8) 40%,
-    rgba(234, 234, 236, 0.45) 100%
-  );
+  background: linear-gradient(to bottom, transparent, #d1d5db 50%, #e5e7eb); 
+  /* height: 90%;  */
 }
 
 .vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px #afafafd2, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+  box-shadow: 0 0 0 4px #e5e7eb, inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -111,6 +108,28 @@
   background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
+}
+
+
+.gcp /deep/ .gcp-1 {
+  fill: #4285f4;
+}
+
+.gcp-1 path {
+  fill: #ea4335 !important;
+  stroke: #ea4335 !important;
+}
+
+.gcp:hover .gcp-2 {
+  fill: #4285f4 !important;
+}
+
+.gcp:hover .gcp-3 {
+  fill: #34a853 !important;
+}
+
+.gcp:hover .gcp-4 {
+  fill: #fbbc05 !important;
 }
 
 .bw-gradient {

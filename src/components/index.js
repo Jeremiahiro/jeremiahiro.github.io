@@ -1,10 +1,10 @@
-import { BallCanvas } from './canvas';
-import Hero from './Hero';
-import Navbar from './Navbar';
-import About from './About';
-import Tech from './Tech';
-import Experience from './Experience';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Profile from './Profile';
 import Projects from './Projects';
-import Contact from './Contact';
+import Service from './Service';
+import Experience from './Experience';
+import Tech from './Tech';
+import IconSvg from './IconSvg';
 
-export { Hero, Navbar, About, Tech, Experience, Projects, Contact, BallCanvas };
+export { Header, Sidebar, Profile, Projects, Service, Experience, Tech, IconSvg };

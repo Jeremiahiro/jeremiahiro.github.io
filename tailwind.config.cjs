@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    'node_modules/flowbite-react/lib/esm/**/*.js'
+  ],
   mode: 'jit',
   theme: {
     extend: {
       colors: {
-        primary: '#050816',
+        primary: '#3498DB',
         secondary: '#aaa6c3',
         tertiary: '#151030',
         'black-100': '#100d25',
@@ -61,8 +65,13 @@ export default {
         overcameBold: ['Overcame Bold'],
         overcameOutline: ['Overcame Outline'],
         poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        caveat: ['Caveat', 'cursive'],
+        gilroy: ['Gilroy', 'gilroy'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };

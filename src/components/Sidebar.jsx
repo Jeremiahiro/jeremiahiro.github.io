@@ -1,101 +1,60 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
+import { useState } from 'react';
+import { IconSvg } from "../components";
 import { navLinks } from '../constants';
-import { close, menu, logo, logotext } from '../assets';
 
-const Navbar = () => {
-  const [active, setActive] = useState('');
-  const [toggle, setToggle] = useState(false);
+const Sidebar = () => {
+
+  const [selectedTab, setSelectedTab] = useState(navLinks[0].id);
 
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed 
-      top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive('');
-            window.scrollTo(0, 0);
-          }}>
-          <img
-            src={logo} // your logo comes here
-            alt="logo"
-            className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
-          />
-
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          <img
-            src={logotext}
-            alt="logo"
-            className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
-          />
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? 'text-french' : 'text-eerieBlack'
-              } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer nav-links`}
-              onClick={() => setActive(nav.title)}>
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
-
-        {/* mobile */}
-        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
-          {toggle ? (
-            <div
-              className={`p-6 bg-flashWhite opacity-[0.98] absolute 
-                top-0 left-0 w-screen h-[100vh] z-10 menu ${
-                  toggle ? 'menu-open' : 'menu-close'
-                }`}>
-              <div className="flex justify-end">
-                <img
-                  src={close}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
-              </div>
-              <ul
-                className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]">
-                {navLinks.map((nav) => (
-                  <li
-                    id={nav.id}
-                    key={nav.id}
-                    className={`${
-                      active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}>
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
+    <>
+      <div className="flex flex-col divide-y divide-slate-200 [&>*]:py-16">
+        <div
+          className="space-y-8 relative before:absolute before:-translate-x-1/2 before:-translate-y-3 md:before:ml-[1.25rem] before:h-5/6 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+          id="portfolio-tab" data-tabs-toggle="#portfolio-tab-content" role="tablist"
+        >
+          {navLinks.map((tab) => {
+            return (
+              <div 
+                key={tab.id} 
+                className="relative py-6 group cursor-pointer" 
+                role="presentation"
+              >
+                <div className="flex flex-col items-center mb-1 sm:flex-row"
+                  id={`${tab.id}-tab`}
+                  data-tabs-target={`#${tab.id}`}
+                  type="button"
+                  role="tab"
+                  aria-controls={tab.id}
+                  aria-selected={selectedTab === tab.id}
+                  onClick={() => setSelectedTab(tab.id)}
+                >
+                  <div>
+                    <div
+                      className={`flex items-center justify-center w-10 h-10 transition duration-300 ease-in-out transform rounded-full shadow md:order-1 group-hover:bg-primary group-hover:rotate-45 ${selectedTab === tab.id ? 'bg-primary rotate-45' : 'bg-slate-800 dark:bg-white'}`}>
+                      <IconSvg
+                        name={tab.id}
+                        class={`group-hover:text-white ${
+                          selectedTab === tab.id ? 'text-white' : 'text-gray-200 dark:text-gray-800'
+                        }`}
+                        width={tab.width}
+                        height={tab.height}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={`ml-2 text-2xl font-medium ${selectedTab === tab.id ? 'active border-b-2 border-primary text-primary' : ''} aria-selected:border-b-2 aria-selected:border-primary aria-selected:text-primary text-gray-500 hover:border-b-2 group-hover:border-b-2  hover:text-primary group-hover:text-primary group-hover:border-primary hover:border-primary font-caveat`}
+                  >
+                    {tab.title}
+                  </div>
+                </div>
             </div>
-          ) : (
-            <img
-              src={menu}
-              alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
+            )
+          })}
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
-export default Navbar;
+export default Sidebar;

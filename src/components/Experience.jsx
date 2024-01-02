@@ -4,128 +4,76 @@ import {
 } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
-import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
-import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
-
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{
-      background: '#eaeaec',
-      color: '#292929',
-      boxShadow:
-        'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-    }}
-    contentArrowStyle={{
-      borderRight: '7px solid  #232631',
-    }}
-    date={
-      <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
-          {experience.date}
-        </h3>
-      </div>
-    }
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
-      </div>
-    }>
-    <div>
-      <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
-        {experience.title}
-      </h3>
-      <p
-        className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
-        style={{ margin: 0 }}>
-        {experience.company_name}
-      </p>
-    </div>
-  </VerticalTimelineElement>
-);
+import { IconSvg } from "../components";
 
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
-          What I've done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-          Work Experience.
-        </h2>
-      </motion.div>
+      <div className="text-gray-600 dark:text-gray-300">
+        <motion.div variants={textVariant()}>
+          <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">Where I&#39;ve Worked</p>
+          <h2 className='font-black font-gilroy md:text-[40px] sm:text-[28px] xs:text-[20px] text-[10px]'>Work Experience</h2>
+        </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline className="vertical-timeline-custom-line">
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-          <VerticalTimelineElement
-            contentStyle={{
-              background: '#eaeaec',
-              color: '#292929',
-              boxShadow:
-                'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            contentArrowStyle={{
-              borderRight: '7px solid  #232631',
-            }}
-            iconStyle={{ background: '#333333' }}
-            icon={
-              <div className="flex justify-center items-center w-full h-full">
-                <img
-                  src={resume}
-                  alt="resume"
-                  className="w-[45%] h-[45%] object-contain"
-                />
-              </div>
-            }>
-            <button
-              className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
-              onClick={() =>
-                window.open(
-                  'resume link', //paste the link to your resume here
-                  '_blank'
-                )
-              }
-              onMouseOver={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', download);
-              }}>
-              MY RESUME
-              <img
-                src={download}
-                alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
-              />
-            </button>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
+        <div className="flex flex-col font-gilroy">
+          <VerticalTimeline className="vertical-timeline-custom-line">
+            {experiences.map((experience, index) => (
+              <VerticalTimelineElement
+                key={index}
+                contentStyle={{ background: 'none', color: '#fff', border: '1px solid #d2d6dc', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}
+                contentArrowStyle={{ borderRight: '7px solid #d2d6dc' }}
+                date={
+                  <time className="block px-2 text-xl font-normal leading-none text-gray-600 dark:text-gray-400">
+                  {experience.date}
+                  </time>
+                }
+                iconClassName={ experience.iconClassName }
+                iconOnClick={experience.website ? () => window.open(experience.website, '_blank') : null}
+                icon={
+                    <IconSvg
+                      name={experience.icon}
+                      class="text-gray-200"
+                    />
+                }>
+
+                <div data-tooltip-target={`experience-tooltip-${index}`} data-tooltip-placement={`${index % 2 === 0 ? 'right' : 'left'}`} type="button">
+                  {experience.is_resume ? (
+                    <div className='p-5 text-center'>
+                      <button type="button" className="text-white bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                      onClick={experience.website ? () => window.open(experience.website, '_blank') : null}>
+                        <span className="ml-2">View / Download Resume </span>
+                        <IconSvg
+                          name='download'
+                          class="text-white inline-block"
+                        />
+                      </button>
+                    </div>
+                  ) : <>
+                      <h3 className="flex items-center mb-1 text-lg font-bold text-gray-900 vertical-timeline-element-title dark:text-white">
+                        {experience.title}
+                        <span className={`${experience.is_volunteer ? 'block' : 'hidden'} bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3`}>
+                        Volunteer
+                        </span>
+                    </h3>
+                      <h4 className="mb-4 text-base font-normal text-gray-400 dark:text-gray-300">
+                        {experience.company_name}
+                      </h4>
+                      <p className="text-sm font-normal text-gray-500 dark:text-gray-400">{experience.contract_type}</p>
+                    </>
+                    }
+                    
+                </div>
+                <div id={`experience-tooltip-${index}`} role="tooltip" className="absolute z-10 invisible block w-auto px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    {experience.location}
+                  <div className="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     </>
   );
