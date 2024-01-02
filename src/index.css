@@ -35,6 +35,11 @@
   outline: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html {
+  color-scheme: dark;
 }
 
 .hash-span {

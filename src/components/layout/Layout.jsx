@@ -4,6 +4,7 @@ const Layout = () => {
 
   return (
     <>
+      <div className="dark">
       <div className="min-h-screen bg-gray-200 dark:bg-gray-800 start-0">
         <Header />
         <div className="flex justify-start pl-20 pt-5">
@@ -30,6 +31,7 @@ const Layout = () => {
               </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
