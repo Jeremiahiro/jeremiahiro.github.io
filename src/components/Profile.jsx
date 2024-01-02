@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div className="text-gray-600 dark:text-gray-300 w-2/3 ">
       <motion.div variants={textVariant()}>
-        <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">Hi, I'm</p>
+        <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">Hi, I&apos;m</p>
         <h2 className='font-black font-gilroy md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px]'>Jeremiah Iro</h2>
       </motion.div>
 

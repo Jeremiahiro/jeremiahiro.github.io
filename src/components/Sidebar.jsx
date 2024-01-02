@@ -17,7 +17,7 @@ const Sidebar = () => {
             return (
               <div 
                 key={tab.id} 
-                className="relative py-6 group cursor-pointer" 
+                className="relative py-4 group cursor-pointer" 
                 role="presentation"
               >
                 <div className="flex flex-col items-center mb-1 sm:flex-row"
