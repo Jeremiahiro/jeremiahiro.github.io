@@ -8,9 +8,9 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="flex flex-col divide-y divide-slate-200 [&>*]:py-16">
+      <div className="md:flex md:flex-col md:divide-y md:divide-slate-200 [&>*]:py-12">
         <div
-          className="space-y-8 relative before:absolute before:-translate-x-1/2 before:-translate-y-3 md:before:ml-[1.25rem] before:h-5/6 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+          className="md:space-y-8 md:relative md:before:absolute md:before:-translate-x-1/2 md:before:-translate-y-3 md:before:ml-[1.25rem] md:before:h-5/6 md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-transparent md:before:via-slate-300 md:before:to-transparent md:block flex justify-between"
           id="portfolio-tab" data-tabs-toggle="#portfolio-tab-content" role="tablist"
         >
           {navLinks.map((tab) => {
@@ -31,7 +31,7 @@ const Sidebar = () => {
                 >
                   <div>
                     <div
-                      className={`flex items-center justify-center w-10 h-10 transition duration-300 ease-in-out transform rounded-full shadow md:order-1 group-hover:bg-primary group-hover:rotate-45 ${selectedTab === tab.id ? 'bg-primary rotate-45' : 'bg-slate-800 dark:bg-white'}`}>
+                      className={`hidden md:flex items-center justify-center w-10 h-10 transition duration-300 ease-in-out transform rounded-full shadow md:order-1 group-hover:bg-primary group-hover:rotate-45 ${selectedTab === tab.id ? 'bg-primary rotate-45' : 'bg-slate-800 dark:bg-white'}`}>
                       <IconSvg
                         name={tab.id}
                         class={`group-hover:text-white ${
@@ -43,7 +43,7 @@ const Sidebar = () => {
                     </div>
                   </div>
                   <div
-                    className={`ml-2 text-2xl font-medium ${selectedTab === tab.id ? 'active border-b-2 border-primary text-primary' : ''} aria-selected:border-b-2 aria-selected:border-primary aria-selected:text-primary text-gray-500 hover:border-b-2 group-hover:border-b-2  hover:text-primary group-hover:text-primary group-hover:border-primary hover:border-primary font-caveat`}
+                    className={`md:ml-2 text-base md:text-2xl ${selectedTab === tab.id ? 'active border-b-2 border-primary text-primary' : ''} aria-selected:border-b-2 aria-selected:border-primary aria-selected:text-primary text-gray-700 dark:text-gray-400 hover:border-b-2 group-hover:border-b-2  hover:text-primary group-hover:text-primary group-hover:border-primary hover:border-primary font-caveat`}
                   >
                     {tab.title}
                   </div>

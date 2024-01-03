@@ -9,12 +9,12 @@ const Tech = () => {
   return (
     <>
     <div className="text-gray-600 dark:text-gray-300">
-      <div className="w-full flex">
-        <div className="w-2/3">
+      <div className="w-full flex md:flex-row flex-col">
+        <div className="w-full md:w-2/3">
           <div className="pr-2">
             <motion.div variants={textVariant()}>
               <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">My Skills</p>
-              <h4 className='font-black font-gilroy md:text-[40px] sm:text-[28px] xs:text-[20px] text-[10px]'>Technical Skills</h4>
+              <h2 className='font-black font-gilroy md:text-[30px] text-[16px]'>Technical Skills</h2>
             </motion.div>
 
             <div className="mt-5">
@@ -39,11 +39,11 @@ const Tech = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="w-full md:w-1/3">
           <div className="pl-2">
           <motion.div variants={textVariant()}>
             <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px] invisible">My Skills</p>
-            <h4 className='font-black font-gilroy md:text-[40px] sm:text-[28px] xs:text-[20px] text-[10px]'>Soft Skills</h4>
+            <h2 className='font-black font-gilroy md:text-[30px] text-[16px]'>Soft Skills</h2>
           </motion.div>
 
           <div className="mt-5">

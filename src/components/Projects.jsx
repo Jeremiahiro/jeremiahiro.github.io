@@ -1,23 +1,30 @@
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { SectionWrapper } from '../hoc';
-import { textVariant, staggerContainer } from '../utils/motion';
 import { projects } from '../constants';
+import { fadeIn, textVariant } from '../utils/motion';
 
 const Projects = () => {
   return (
     <>
       <div className="text-gray-600 dark:text-gray-300">
         <motion.div variants={textVariant()}>
-          <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">What I&#39;ve Done</p>
-          <h2 className='font-black font-gilroy md:text-[40px] sm:text-[28px] xs:text-[20px] text-[10px]'>Projects Done</h2> 
+          <p className="font-semibold tracking-wider font-caveat md:text-[18px] text-[14px]">What I&#39;ve Done</p>
+          <h2 className='font-black font-gilroy md:text-[40px] text-[20px]'>What I&#39;ve Done</h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-8 mt-10">
+        {/* <motion.div
+            whileHover={{ scale: 1.1 }}
+            key={index}
+            variants={fadeIn('right', 'tween', 0.1 * index, 0.75)}
+            className='group w-full relative isolate overflow-hidden rounded-2xl cursor-pointer shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:rounded-lg'
+          > */}
+
+        <div className="grid md:grid-cols-2 gap-8 mt-10">
           {projects.map((project, index) => (
             <motion.div
               key={project.id + index}
-              variants={staggerContainer()}
+              variants={fadeIn('right', '', 0.3, 0.75)}
               initial="hidden"
               whileInView="show"
               className="group w-full relative isolate px-8 pb-4 pt-36 flex flex-col justify-end overflow-hidden rounded-2xl cursor-pointer shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:rounded-lg"

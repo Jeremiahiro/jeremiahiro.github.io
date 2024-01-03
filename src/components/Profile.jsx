@@ -5,17 +5,20 @@ import { jay } from '../assets';
 
 const Profile = () => {
   return (
-    <div className="text-gray-600 dark:text-gray-300 w-2/3 ">
+    <div className="text-gray-600 dark:text-gray-300 md:w-2/3">
       <motion.div variants={textVariant()}>
         <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">Hi, I&apos;m</p>
-        <h2 className='font-black font-gilroy md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px]'>Jeremiah Iro</h2>
+        <h2 className='font-black font-gilroy md:text-[30px] text-[16px]'>Jeremiah Iro</h2>
       </motion.div>
 
       <motion.p
         variants={textVariant()}
-        className="mt-4 text-[18px] max-w-3xl leading-[30px] font-gilroy text-justify"
+        className="md:pb-2 pb-10 my-4 text-[18px] md:max-w-3xl leading-[30px] font-gilroy text-justify"
       >
-        A software developer with passion for driving innovation and efficiency in the dynamic world of technology. My extensive expereince of over 6 years spans various roles, from Full Stack Developer and Cloud DevOps to Application Support & IT Consulting. As a proactive and results-driven professional, I have successfully led projects/teams, which is evident in my ability to effectively work indepently and as part of a team. My proficiency in diverse technologies reflects my commitment to staying at the forefront of industry trends.
+        A software developer with passion for driving innovation and efficiency in the dynamic world of technology. My extensive expereince of over 6 years spans various roles, from Full Stack Developer and Cloud DevOps to Application Support & IT Consulting. 
+        <span className="hidden md:block">
+        As a proactive and results-driven professional, I have successfully led projects/teams, which is evident in my ability to effectively work indepently and as part of a team. My proficiency in diverse technologies reflects my commitment to staying at the forefront of industry trends.
+        </span>
         <br />
         <br />
         {/* My hunger for knowledge and determination to turn information into action, inspried the pursit of my Masters in Information Managment and a Master's in Entrepreneurship and Innovation Management thus I bring a unique blend of technical expertise and strategic business acumen to every project. */}
@@ -24,7 +27,7 @@ const Profile = () => {
 
       <motion.div 
         variants={fadeIn('right', '', 0.5, 1)}
-        className="flex justify-center t-20"
+        className="flex md:justify-center"
       >
         <svg width="160" className='' viewBox="0 80 204 204">
           {/* Circle */}
@@ -79,7 +82,7 @@ const Profile = () => {
 
       <motion.div
         variants={fadeIn('left', '', 0.5, 1)}
-        className="absolute bottom-0 right-0 w-[30rem] h-[34rem] ">
+        className="absolute bottom-0 right-0 w-[10rem] h-[14rem] md:w-[20rem] md:h-[24rem]">
         <img
           src={jay}
           alt="Jeremiah Iro"

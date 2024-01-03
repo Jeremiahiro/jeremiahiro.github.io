@@ -6,17 +6,16 @@ import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
-import { textVariant } from '../utils/motion';
 import { IconSvg } from "../components";
 
 const Experience = () => {
   return (
     <>
       <div className="text-gray-600 dark:text-gray-300">
-        <motion.div variants={textVariant()}>
-          <p className="font-semibold tracking-wider font-caveat sm:text-[18px] text-[16px]">Where I&#39;ve Worked</p>
-          <h2 className='font-black font-gilroy md:text-[40px] sm:text-[28px] xs:text-[20px] text-[10px]'>Work Experience</h2>
-        </motion.div>
+      <motion.div>
+        <p className="font-semibold tracking-wider font-caveat md:text-[18px] text-[14px]">Where I&#39;ve Worked</p>
+        <h2 className='font-black font-gilroy md:text-[40px] text-[20px]'>Work Experience</h2>
+      </motion.div>
 
         <div className="flex flex-col font-gilroy">
           <VerticalTimeline className="vertical-timeline-custom-line">
