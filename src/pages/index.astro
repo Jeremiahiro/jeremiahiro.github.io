@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+type Quote = {
+	author: string
+	quote: string
+}
+let content: Quote | null = null;
+
+const response = await fetch('https://strangerthings-quotes.vercel.app/api/quotes');
+const data = await response.json();
+content = data[0] as Quote | null;
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="grid min-h-screen overflow-hidden relative">
+		<div class="absolute right-0">
+			<ThemeToggle />
+		</div>
+		<div class="absolute right-0 bottom-0 p-4">
+			<h2>Jeremiah Iro</h2>
+		</div>
+		<section class="grid place-items-center">
+			{ content && <figure class="max-w-screen-md mx-auto text-center">
+				<blockquote>
+					<p class="text-2xl italic font-medium">"{content.quote}"</p>
+				</blockquote>
+				<figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+						<cite class="ps-3 text-sm">~ {content.author}</cite>
+				</figcaption>
+			</figure>}
+
+		</section>
+	
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		width: 1080px;
+		max-width: calc(100% - 2rem);
+	}
+</style>
