@@ -1,4 +1,6 @@
 ---
+import Footer from '../components/Footer.astro';
+
 interface Props {
 	title: string;
 }
@@ -15,9 +17,16 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<slot />
+		<main class="grid min-h-screen overflow-hidden relative">
+
+			<slot />
+			<Footer />
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -28,4 +37,22 @@ const { title } = Astro.props;
 	html.dark {
 		@apply bg-slate-100 text-slate-900;
 	}
+	main {
+		margin: auto;
+		width: 1080px;
+		max-width: calc(100% - 2rem);
+	}
+
+	.league-spartan-regular {
+		font-family: "League Spartan", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+	}
+
+	.league-spartan-light {
+		font-family: "League Spartan", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 300;
+	}
+
 </style>
