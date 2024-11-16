@@ -9,28 +9,33 @@ let content: Quote | null = {
 };
 
 try {
-	const response = await fetch('https://strangerthings-quotes.vercel.app/api/quotes');
-	if(response.ok) {
-		const data = await response.json();
-		content = data[0] as Quote | null;
+    const response = await fetch('https://strangerthings-quotes.vercel.app/api/quotes');
+ 
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
 	}
+	
+	const data = await response.json();
+	content = (data[0] as Quote) || null;
+
 } catch (error) {
-	console.error(error);
+	console.error('An error occurred when:', error);
 }
+
 
 ---
 
 <section class="grid place-items-center">
     { 
         content && 
-        <figure class="max-w-screen-md mx-auto text-center">
+        <figure class="mx-auto text-center max-w-1/3">
             <blockquote>
-                <p class="text-2xl italic font-medium league-spartan-regular">
+                <p class="text-base italic font-medium league-spartan-regular">
                     {content.quote}
                 </p>
             </blockquote>
             <figcaption class="flex items-center justify-center mt-6 space-x-3 league-spartan-light">
-                    <cite class="ps-3 text-sm">~ {content.author}</cite>
+                    <cite class="text-sm ps-3">~ {content.author}</cite>
             </figcaption>
         </figure>
     }
