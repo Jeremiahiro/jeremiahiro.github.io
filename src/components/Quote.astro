@@ -1,15 +1,18 @@
 ---
+// @ts-ignore
+import fs from 'fs';
+// @ts-ignore
+import path from 'path';
+
+const filePath = path.resolve('./public/quote.json');
+
 type Quote = {
 	author: string
 	quote: string
 }
-let content: Quote | null = { 
-    author: 'Maya Angelou',
-    quote: 'All great achievements require time.'
-};
 
 try {
-    const response = await fetch('https://strangerthings-quotes.vercel.app/api/quotes');
+    const response = await fetch('https://strangerthings-quotes.vercel.app/api/quotes/5');
  
 	if (!response.ok) {
         console.log('An error has occurred::', response)
@@ -17,8 +20,7 @@ try {
 	}
 	
 	const data = await response.json();
-    console.log('Successfully Fetched Data::', data)
-	content = (data[0] as Quote) || null;
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
 
 } catch (error) {
 	console.error('An error occurred when:', error);
@@ -27,18 +29,46 @@ try {
 
 ---
 
-<section class="grid place-items-center">
-    { 
-        content && 
-        <figure class="mx-auto text-center max-w-1/3">
-            <blockquote>
-                <p class="text-base italic font-medium league-spartan-regular">
-                    {content.quote}
-                </p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3 league-spartan-light">
-                    <cite class="text-sm ps-3">~ {content.author}</cite>
-            </figcaption>
-        </figure>
-    }
+<section class="grid place-items-center" id="quote--container">
+  
 </section>
+
+<script>
+    const fallback = { 
+        author: 'Maya Angelou',
+        quote: 'All great achievements require time.'
+    };
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('quote--container');
+        if (!container) return;
+    
+        const renderQuote = ({ quote, author }: { quote: string; author: string }) => {
+            container.innerHTML = `
+                <figure class="mx-auto text-center max-w-1/3">
+                    <blockquote>
+                        <p class="text-base italic font-medium league-spartan-regular">
+                            "${quote}"
+                        </p>
+                    </blockquote>
+                    <figcaption class="flex items-center justify-center mt-6 space-x-3 league-spartan-light">
+                        <cite class="text-sm ps-3">~ ${author || 'Unknown'}</cite>
+                    </figcaption>
+                </figure>
+            `;
+        };
+    
+        try {
+            const response = await fetch('/quote.json');
+            if (!response.ok) throw new Error('Failed to fetch quotes');
+    
+            const quotes = await response.json();
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            renderQuote(randomQuote);
+        } catch (error) {
+            console.error('Error:', error);
+            renderQuote(fallback);
+        }
+    });
+    </script>
+    
