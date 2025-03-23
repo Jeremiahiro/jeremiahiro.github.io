@@ -1,14 +1,22 @@
 ---
+interface Props {
+    class?: string
+}
+
+const { class: className } = Astro.props as Props
 ---
 
-<footer class="absolute bottom-0 w-full">
+<footer class={className}>
     <div class="flex justify-end w-full max-w-screen-xl p-4 mx-auto md:items-right">
-    <ul class="flex flex-wrap items-center text-xs text-gray-500 dark:text-gray-400 league-spartan-light">
+    <ul class="flex items-center text-gray-500 dark:text-gray-400 league-spartan-light">
         <li>
-            <span class="me-2 md:me-4">Jeremiah Iromaka</span>
+            <a href="/" class="hover:underline" target="_blank" title="About Me"><span class="hidden sm:block me-2 md:me-4">Jeremiah Iromaka</span> <span class="block sm:hidden me-2 md:me-4">JI</span> </a>
         </li>
         <li>
             <a href="https://about.me/jeremiahiro" class="hover:underline me-2 md:me-4" target="_blank" title="About Me">About</a>
+        </li>
+        <li>
+            <a href="resume" class="hover:underline me-2 md:me-4" target="_blank" title="Github">CV</a>
         </li>
         <li>
             <a href="https://github.com/Jeremiahiro" class="hover:underline me-2 md:me-4" target="_blank" title="Github">Github</a>

@@ -1,6 +1,11 @@
 ---
+interface Props {
+    class?: string
+}
+
+const { class: className } = Astro.props as Props
 ---
-<button id="themeToggle">
+<button id="themeToggle" class={className}>
     <svg width="100" class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 358" fill="currentColor">
             <path d="M133.068 204.007C133.068 197.749 135.871 194.729 138.963 187.517C139.753 185.676 145.577 166.503 145.577 166.503H172.543C172.543 166.503 177.225 184.831 178.112 186.323C181.835 192.602 185.053 197.176 185.053 204.007C185.053 218.364 173.415 230 159.06 230C144.704 230 133.068 218.362 133.068 204.007Z"  stroke-width="3.1411" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M159.06 167.147V185.899Z" />

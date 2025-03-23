@@ -1,0 +1,10 @@
+.wrapper {
+    padding-block: 80px;
+    padding-inline: 60px;
+    width: 100%;
+    margin: auto;
+
+    @media (max-width: 640px) {
+        padding-inline: 10px;
+    }
+}
