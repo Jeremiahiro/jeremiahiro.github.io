@@ -6,7 +6,7 @@ interface Props {
 const { class: className } = Astro.props as Props
 ---
 
-<footer class={className}>
+<nav class={className}>
     <div class="flex justify-end w-full max-w-screen-xl p-4 mx-auto md:items-right">
     <ul class="flex items-center text-gray-500 dark:text-gray-400 league-spartan-light">
         <li>
@@ -16,7 +16,7 @@ const { class: className } = Astro.props as Props
             <a href="https://about.me/jeremiahiro" class="hover:underline me-2 md:me-4" target="_blank" title="About Me">About</a>
         </li>
         <li>
-            <a href="resume" class="hover:underline me-2 md:me-4" target="_blank" title="Github">CV</a>
+            <a href="resume" class="hover:underline me-2 md:me-4" title="Github">CV</a>
         </li>
         <li>
             <a href="https://github.com/Jeremiahiro" class="hover:underline me-2 md:me-4" target="_blank" title="Github">Github</a>
@@ -26,4 +26,4 @@ const { class: className } = Astro.props as Props
         </li>
     </ul>
     </div>
-</footer>
+</nav>

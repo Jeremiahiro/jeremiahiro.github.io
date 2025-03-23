@@ -1,5 +1,5 @@
 ---
-import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import "../styles/global.css";
 
@@ -27,7 +27,7 @@ const { title } = Astro.props;
 	<body>
 		<main class="relative grid min-h-screen overflow-hidden">
 			<ThemeToggle class="absolute right-0 md:right-8" />
-			<Footer class:list={"absolute top-8 text-base md:text-sm mx-auto md:right-24"} />
+			<Header class:list={"absolute top-8 text-base md:text-sm mx-auto md:right-24"} />
 			<section class="wrapper">
 				<slot />
 			</section>
