@@ -1,57 +1,96 @@
 ---
 import Header from '../components/Header.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import "../styles/global.css";
+import { description as defaultDescription } from '../site';
+import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
+	showHeader?: boolean;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = defaultDescription,
+	showHeader = true,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 	<head>
+		<script is:inline>
+			(function () {
+				try {
+					var stored = localStorage.getItem('theme');
+					var theme = stored === 'light' || stored === 'dark'
+						? stored
+						: (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+					document.documentElement.classList.toggle('dark', theme === 'dark');
+				} catch (e) {}
+			})();
+		</script>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="Description" content="Jeremiah Iromaka is a passionate Full Stack Engineer with over 7 years of experience in software development, innovation, and mentorship. Specializing in eCommerce, SaaS, and automation, Jeremiah leverages cutting-edge technologies like JavaScript (React, Vue, Node.js), PHP (Laravel, Symfony), and Power Platform to deliver scalable, user-centric solutions. With a proven track record of collaborating with global teams across Nigeria, the US, and the UK, Jeremiah is dedicated to elevating human experiences through technology. Explore his portfolio to see how he transforms ideas into impactful digital solutions." />
+		<link rel="canonical" href={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:site_name" content="Jeremiah Iromaka" />
 		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<main class="relative grid min-h-screen overflow-hidden">
-			<ThemeToggle class="absolute right-0 md:right-8" />
-			<Header class:list={"absolute top-8 text-base md:text-sm mx-auto md:right-24"} />
-			<section class="wrapper">
-				<slot />
-			</section>
-		</main>
+		<a href="#content" class="skip-link">Skip to content</a>
+		<div class="relative flex min-h-dvh flex-col">
+			<ThemeToggle class="absolute right-2 top-2 z-20 md:right-6 md:top-5" />
+			{showHeader && <Header class="absolute top-6 z-10 w-full pe-16 text-sm md:top-7 md:pe-24" />}
+			<main id="content" tabindex="-1" class="flex flex-1 flex-col outline-none">
+				<section class="wrapper flex flex-1 flex-col">
+					<slot />
+				</section>
+			</main>
+		</div>
 	</body>
 </html>
 <style is:global>
 	html {
-		font-family: system-ui, sans-serif;
-		@apply bg-slate-900 text-slate-100;
+		font-family: 'League Spartan', system-ui, sans-serif;
+		color-scheme: light;
+		@apply bg-slate-100 text-slate-900 antialiased;
 	}
 	html.dark {
-		@apply bg-slate-100 text-slate-900;
+		color-scheme: dark;
+		@apply bg-slate-900 text-slate-100;
 	}
-	.league-spartan-regular {
-		font-family: "League Spartan", sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 400;
+	.skip-link {
+		position: absolute;
+		left: 1rem;
+		top: 1rem;
+		z-index: 40;
+		transform: translateY(-200%);
+		border-radius: 0.25rem;
+		background: #0f172a;
+		color: #f8fafc;
+		padding: 0.5rem 0.75rem;
 	}
-
-	.league-spartan-light {
-		font-family: "League Spartan", sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 300;
+	.skip-link:focus {
+		transform: none;
+		outline: 2px solid currentColor;
+		outline-offset: 2px;
 	}
-
+	html.dark .skip-link {
+		background: #f8fafc;
+		color: #0f172a;
+	}
 </style>

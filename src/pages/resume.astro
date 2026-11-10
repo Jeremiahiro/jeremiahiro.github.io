@@ -1,9 +1,9 @@
 ---
 import CurriculumVitae from '../components/CurriculumVitae.astro';
 import Layout from '../layouts/Layout.astro';
-
+import { description, name } from '../site';
 ---
 
-<Layout title="Jeremiah Iromaka | Full Stack Engineer & Innovator | Building Scalable Solutions for a Better Future">
-    <CurriculumVitae class:list={"md:px-24 xl:px-64"} />
+<Layout title={`Resume | ${name}`} description={description}>
+	<CurriculumVitae class:list={'mt-4 md:mt-2 md:px-24 xl:px-64'} />
 </Layout>
