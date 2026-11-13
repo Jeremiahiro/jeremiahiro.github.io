@@ -3,7 +3,7 @@ export const name = 'Jeremiah Iromaka';
 export const headline = 'Senior Software Engineer | Commerce and applied AI';
 
 export const description =
-	'Senior software engineer in London. I design and ship eCommerce and SaaS platforms: APIs, storefronts and the delivery systems around them, and I\'m exploring how applied AI and open models can make that work better.';
+	'Senior software engineer in London. I design and ship eCommerce and SaaS platforms: APIs, storefronts and the delivery systems around them. Applied AI, including fine-tuning open models, is a current area of focus.';
 
 export const pageTitle = `${name} | ${headline}`;
 
